@@ -9,6 +9,8 @@ export default class AudioPlayer extends Component {
 
   render = () => (
     <Provider value={{ ...this.state, togglePlay: this.togglePlay }}>
+      <audio ref={node => this.elAudio = node}></audio>
+      {console.dir(this.elAudio)}
       {this.props.children}
     </Provider>
   )

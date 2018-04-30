@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 
 import sound from './sample.mp3'
 
 import {
 	TogglePlay,
-	Play,
-	Pause,
+	// Play,
+	// Pause,
 	State,
 	Mute,
 	Progress,
@@ -14,13 +13,12 @@ import {
 	Back,
 	Forward,
 	Volume,
-	PlaybackRate
+	// PlaybackRate
 } from './AudioPlayer/controlls'
 import AudioPlayer, { Consumer } from './AudioPlayer'
 
 export default () => (
 	<AudioPlayer autoplay source={sound} defaultVolume={0.5}>
-		{/* <TogglePlay /> */}
 		<div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
 			<Consumer>
 				{({ ended, displayShelf, toggleShelf }) =>
@@ -47,11 +45,8 @@ export default () => (
 			</Consumer>
 		</div>
 		<Progress />
-		{/* <br />
-		<Volume />
-		<PlaybackRate /> */}
-		{/* <br />
-		<br />
-		<State /> */}
+    <br />
+    <br />
+    <State />
 	</AudioPlayer>
 )

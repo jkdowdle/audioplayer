@@ -1,12 +1,57 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import styled from 'styled-components'
 
-import AudioPlayer, { Play, Pause, State } from './AudioPlayer'
+import sound from './sample.mp3'
+
+import {
+	TogglePlay,
+	Play,
+	Pause,
+	State,
+	Mute,
+	Progress,
+	Restart,
+	Back,
+	Forward,
+	Volume,
+	PlaybackRate
+} from './AudioPlayer/controlls'
+import AudioPlayer, { Consumer } from './AudioPlayer'
 
 export default () => (
-  <AudioPlayer>
-    <h1>My Player</h1>
-    <State />
-    <Play />
-    <Pause />
-  </AudioPlayer>
+	<AudioPlayer autoplay source={sound} defaultVolume={0.5}>
+		{/* <TogglePlay /> */}
+		<div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+			<Consumer>
+				{({ ended, displayShelf, toggleShelf }) =>
+					ended ? (
+						<div style={{ display: 'flex' }}>
+							<Restart />
+						</div>
+					) : (
+						<Fragment>
+							<div style={{ display: 'flex', flex: 1 }}>
+								<TogglePlay />
+							</div>
+							<div style={{ display: 'flex', flex: 1 }}>
+								{/* <Pause /> */}
+								<Back />
+								<Forward />
+								<div style={{ display: 'flex' }} onMouseEnter={toggleShelf} onMouseLeave={toggleShelf}>
+									<Mute />
+									{displayShelf && <Volume />}
+								</div>
+							</div>
+						</Fragment>
+					)}
+			</Consumer>
+		</div>
+		<Progress />
+		{/* <br />
+		<Volume />
+		<PlaybackRate /> */}
+		{/* <br />
+		<br />
+		<State /> */}
+	</AudioPlayer>
 )

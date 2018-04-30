@@ -3,3 +3,160 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+input[type=range] {
+  /* -webkit-appearance: slider-vertical; */
+  -webkit-appearance: none;
+  max-width: 50px;
+  /* width: 55px; */
+  /* flex: 3; */
+  /* margin: 4.8px 0; */
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  /* width: 100%; */
+  height: 3px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #666666;
+  border-radius: 1.3px;
+  border: 0.2px solid #010100;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 6px;
+  width: 6px;
+  border-radius: 6px;
+  background: rgba(31, 31, 31, 0.91);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -1.8px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  /* background: #bdbdbd; */
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #666666;
+  border-radius: 1.3px;
+  border: 0.2px solid #010100;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 18px;
+  width: 19px;
+  border-radius: 6px;
+  background: rgba(31, 31, 31, 0.91);
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #0f0f0f;
+  border: 0.2px solid #010100;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #666666;
+  border: 0.2px solid #010100;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 18px;
+  width: 19px;
+  border-radius: 6px;
+  background: rgba(31, 31, 31, 0.91);
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #666666;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #bdbdbd;
+}
+
+/*
+input[type=range] {
+  display: inline-flex;
+  -webkit-appearance: slider-vertical;
+  width: 35px;
+}
+
+input::after {
+  content: '';
+}
+toggle styles copied and modified from
+https://codepen.io/mallendeo/pen/eLIiG
+by Mauricio Allende (https://mallendeo.com/)
+
+/*
+ .toggle-btn {
+  box-sizing: initial;
+  display: inline-block;
+  outline: 0;
+  width: 8em;
+  height: 4em;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  background: #fbfbfb;
+  border-radius: 4em;
+  padding: 4px;
+  transition: all 0.4s ease;
+  border: 2px solid #e8eae9;
+}
+.toggle-btn:focus::after,
+.toggle-btn:active::after {
+  box-sizing: initial;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08),
+    inset 0px 0px 0px 3px #9c9c9c;
+}
+.toggle-btn::after {
+  left: 0;
+  position: relative;
+  display: block;
+  content: '';
+  width: 50%;
+  height: 100%;
+  border-radius: 4em;
+  background: #fbfbfb;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.toggle-btn.toggle-btn-on::after {
+  left: 50%;
+}
+.toggle-btn.toggle-btn-on {
+  background: #86d993;
+}
+.toggle-btn.toggle-btn-on:active {
+  box-shadow: none;
+}
+.toggle-btn.toggle-btn-on:active::after {
+  margin-left: -1.6em;
+}
+.toggle-btn:active::after {
+  padding-right: 1.6em;
+}
+.toggle-input {
+  display: none;
+} */
